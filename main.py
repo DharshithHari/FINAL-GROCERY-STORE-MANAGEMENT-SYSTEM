@@ -1,6 +1,6 @@
 import sqlite3
 from datetime import datetime
-import sys
+#import sys
 from typing import List, Dict
 
 # ============================================
@@ -169,9 +169,9 @@ class TransactionHandler:
 
     def print_bill(self, customer_name: str, trans_id: int, subtotal: float, discount: float, total: float):
         print("\n" + "=" * 50)
-        print("{:^50}".format("TN GROCERY STORE"))
-        print("{:^50}".format("Chennai, TamilNadu"))
-        print("{:^50}".format("Tel: +91 xxx-xxx-xxxx"))
+        print("{:^50}".format("SUPERMART GROCERY"))
+        print("{:^50}".format("123 Main Street, City"))
+        print("{:^50}".format("Tel: (555) 123-4567"))
         print("=" * 50)
         print(f"{'Bill No:':<15}{trans_id:>35}")
         print(f"{'Date:':<15}{datetime.now().strftime('%d-%b-%Y %H:%M'):>35}")
@@ -220,7 +220,7 @@ class GroceryStoreSystem:
                 elif choice == '2':
                     self.process_transaction()
                 elif choice == '3':
-                    ..")
+                    print("Exiting system...")
                     self.db.conn.close()
                     sys.exit(0)
                 else:
